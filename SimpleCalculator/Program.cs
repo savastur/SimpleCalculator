@@ -1,5 +1,8 @@
 ﻿using System.Collections;
-
+//Sturm Savage
+//RCET2265
+//Spring Semester
+//https://github.com/savastur/SimpleCalculator.git
 namespace SimpleCalculator
 {
     internal class Program
