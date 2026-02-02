@@ -9,11 +9,11 @@ namespace SimpleCalculator
     {
         static void Main(string[] args)
         {
-                //res=product, sum, qutient, or difference.
-                float res, a, b;
-                String signInput = "";
-                string userInput = "";
-                bool End = false;
+            //res = product, sum, qutient, or difference.
+            float res, a, b;
+            String signInput = "";
+            string userInput = "";
+            bool End = false;
             do
             {
                 //Converst string into number 
@@ -21,76 +21,60 @@ namespace SimpleCalculator
                 Console.WriteLine("Press Enter to continue.");
                 userInput = Console.ReadLine();
                 
-               
-              try
-                {
-                
-                Console.WriteLine("Type First Number");
-                a = (float)Convert.ToDouble(Console.ReadLine()); //fisrt number 
-                Console.WriteLine("Type second number");
-                b = (float)Convert.ToDouble(Console.ReadLine()); //second number
-                //sign selection
-                Console.WriteLine("Slect Sign:(/,*,+,-)");
-                signInput = Console.ReadLine();
-                    
 
-                switch (signInput)
+                try
                 {
-                    case "/":
-                        res = a / b;
-                        Console.WriteLine("Result:" + res);
-                        Console.WriteLine($" {res = a / b};");
 
-                        break;
-                    case "+":
-                        res = a + b;
-                        Console.WriteLine("Result:" + res);
-                        Console.WriteLine($"{res = a + b}");
-                        break;
-                    case "-":
-                        res = a - b;
-                        Console.WriteLine("Result:" + res);
-                        Console.WriteLine($"{res = a - b}");
-                        break;
-                    case "*":
-                        res = a * b;
-                        Console.WriteLine("Result:" + res);
-                        Console.WriteLine($"{res = a * b}");
-                        break;
-                }
+                    Console.WriteLine("Type First Number");
+                    a = (float)Convert.ToDouble(Console.ReadLine()); //fisrt number 
+                    Console.WriteLine("Type second number");
+                    b = (float)Convert.ToDouble(Console.ReadLine()); //second number
+                    //sign selection
+                    Console.WriteLine("Slect Sign:(/,*,+,-)");
+                    signInput = Console.ReadLine();
+
+
+                    switch (signInput)
+                    {
+                        case "/":
+                            res = a / b;
+                            Console.WriteLine("Result:" + res);
+                            Console.WriteLine($" {res = a / b};");
+
+                            break;
+                        case "+":
+                            res = a + b;
+                            Console.WriteLine("Result:" + res);
+                            Console.WriteLine($"{res = a + b}");
+                            break;
+                        case "-":
+                            res = a - b;
+                            Console.WriteLine("Result:" + res);
+                            Console.WriteLine($"{res = a - b}");
+                            break;
+                        case "*":
+                            res = a * b;
+                            Console.WriteLine("Result:" + res);
+                            Console.WriteLine($"{res = a * b}");
+                            break;
+                    }
                 }
                 catch (Exception ex)
                 {
-                    if (Console.ReadLine() == "q")
-                    {
-                      Console.WriteLine ("Have a Nice Day!!");
-                        End = true;
-                    }
-                    if (Console.ReadLine() == "Q")
+                    if (userInput == "q" || userInput == "Q")
                     {
                         Console.WriteLine("Have a Nice Day!!");
-                        End = true;
                     }
-                   
+                 
                 }
-                
+
 
 
             }
             while (!End);
             Console.Read();
 
-            }
-
-            
-          
-            
-
-
-
-
-           
-        
+        }
 
         private static int Consolereadline()
         {
