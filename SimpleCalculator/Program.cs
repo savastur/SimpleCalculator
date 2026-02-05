@@ -10,13 +10,12 @@ namespace SimpleCalculator
         static void Main(string[] args)
         {
             //res = product, sum, qutient, or difference.
-            float res, a, b;
+            float result, firstNumber, secondNumber;
             String signInput = "";
             string userInput = "";
             bool End = false;
             do
             {
-                //Converst string into number 
                 Console.WriteLine("Enter \"Q\" to quit.");
                 Console.WriteLine("Press Enter to continue.");
                 userInput = Console.ReadLine();
@@ -25,10 +24,11 @@ namespace SimpleCalculator
                 try
                 {
 
+                    //Converts string into number 
                     Console.WriteLine("Type First Number");
-                    a = (float)Convert.ToDouble(Console.ReadLine()); //fisrt number 
+                    firstNumber = (float)Convert.ToDouble(Console.ReadLine()); //fisrt number 
                     Console.WriteLine("Type second number");
-                    b = (float)Convert.ToDouble(Console.ReadLine()); //second number
+                    secondNumber = (float)Convert.ToDouble(Console.ReadLine()); //second number
                     //sign selection
                     Console.WriteLine("Slect Sign:(/,*,+,-)");
                     signInput = Console.ReadLine();
@@ -37,25 +37,25 @@ namespace SimpleCalculator
                     switch (signInput)
                     {
                         case "/":
-                            res = a / b;
-                            Console.WriteLine("Result:" + res);
-                            Console.WriteLine($" {res = a / b};");
+                            result = firstNumber / secondNumber;
+                            Console.WriteLine("Result:" + result);
+                            Console.WriteLine($" {result = firstNumber / secondNumber};");
 
                             break;
                         case "+":
-                            res = a + b;
-                            Console.WriteLine("Result:" + res);
-                            Console.WriteLine($"{res = a + b}");
+                            result = firstNumber + secondNumber;
+                            Console.WriteLine("Result:" + result);
+                            Console.WriteLine($"{result = firstNumber + secondNumber}");
                             break;
                         case "-":
-                            res = a - b;
-                            Console.WriteLine("Result:" + res);
-                            Console.WriteLine($"{res = a - b}");
+                            result = firstNumber - secondNumber;
+                            Console.WriteLine("Result:" + result);
+                            Console.WriteLine($"{result = firstNumber - secondNumber}");
                             break;
                         case "*":
-                            res = a * b;
-                            Console.WriteLine("Result:" + res);
-                            Console.WriteLine($"{res = a * b}");
+                            result = firstNumber * secondNumber;
+                            Console.WriteLine("Result:" + result);
+                            Console.WriteLine($"{result = firstNumber * secondNumber}");
                             break;
                     }
                 }
